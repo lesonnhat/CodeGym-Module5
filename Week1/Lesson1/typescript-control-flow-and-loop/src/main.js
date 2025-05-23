@@ -1,6 +1,6 @@
 var sum = 0;
 var count = 0;
-for (var i = 2; count < 30; i++) {
+for (var i = 0; i < 30; i++) {
     var isPrime = true;
     if (i == 2) {
         sum += i;
@@ -16,7 +16,6 @@ for (var i = 2; count < 30; i++) {
     if (!isPrime) {
         continue;
     }
-    console.log(i);
     sum += i;
     count++;
 }

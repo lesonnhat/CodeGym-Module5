@@ -1,6 +1,6 @@
 let sum: number = 0;
 let count: number = 0;
-for (let i = 2; count < 30; i++) {
+for (let i = 0; i < 30; i++) {
     let isPrime: boolean = true;
     if (i == 2) {
         sum += i;
@@ -13,7 +13,7 @@ for (let i = 2; count < 30; i++) {
             break;
         }
     }
-    if(!isPrime){
+    if (!isPrime) {
         continue;
     }
     sum += i;
