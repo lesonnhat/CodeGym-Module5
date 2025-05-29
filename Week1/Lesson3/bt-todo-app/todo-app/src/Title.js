@@ -1,6 +1,6 @@
 function Title () {
     return (
-        <h1>Todoo List</h1>
+        <h1>Todo List</h1>
     );
 }
 
