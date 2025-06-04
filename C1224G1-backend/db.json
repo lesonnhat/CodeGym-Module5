@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Alice",
       "email": "alice@gmail.com",
       "password": "123456",
@@ -10,7 +10,7 @@
       "roleId": 1
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Lien",
       "email": "lien123@gmail.com",
       "password": "123456",
@@ -21,12 +21,12 @@
   ],
   "roles": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Admin",
       "description": "Administrator with full access"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "User",
       "description": "User Account"
     }
