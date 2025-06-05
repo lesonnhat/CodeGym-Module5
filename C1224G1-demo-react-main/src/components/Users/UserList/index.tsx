@@ -3,6 +3,7 @@ import {Button, Form, Table} from "react-bootstrap";
 import {Link} from "react-router";
 import UserService from "../../../services/user.service.ts";
 import {toast} from "react-toastify";
+import { Input } from "@mui/material";
 
 
 function UserList() {
@@ -31,15 +32,22 @@ function UserList() {
     }
 
     useEffect(() => {
-        // call api de get data hien thi
         UserService.getAllUser().then(res => {
+            console.log(res.data); // Kiểm tra cấu trúc dữ liệu tại đây
             setUsers(res.data);
-        })
-    }, [reload])
+        });
+    }, [reload]);
 
     useEffect(() => {
         console.log("Component user list did update")
     }, [users]);
+
+    const handleSearch = (event: any) => {
+        const keyword: string = event.target.value;
+        UserService.searchByName(keyword).then(res => {
+            setUsers(res.data)
+        })
+    }
 
     return (
         <>
@@ -47,6 +55,7 @@ function UserList() {
             <Link to={"/admin/users/create"}>
                 <Button variant={"success"}>Create</Button>
             </Link>
+            <Input onChange={(e) => handleSearch(e)}/>
             <Table striped bordered hover>
                 <thead>
                 <tr>
@@ -66,9 +75,9 @@ function UserList() {
                         <td>{user.name}</td>
                         <td>{user.email}</td>
                         <td>{user.phone}</td>
-                        <td>{user.role.name}</td>
+                        <td>{user.role?.name || 'No role'}</td>
                         <td>
-                            <Form>
+                        <Form>
                                 <Form.Check // prettier-ignore
                                     type="switch"
                                     id="custom-switch"
