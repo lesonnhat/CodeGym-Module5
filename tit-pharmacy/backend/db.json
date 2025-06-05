@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": "PROD-0001",
+      "name": "Vitamin C",
+      "category": "Thực phẩm chức năng",
+      "quantity": 100,
+      "price": 20000,
+      "dateAdded": "2023-06-01"
+    },
+    {
+      "id": "PROD-0002",
+      "name": "Máy đo huyết áp",
+      "category": "Thiết bị y tế",
+      "quantity": 50,
+      "price": 300000,
+      "dateAdded": "2023-06-02"
+    },
+    {
+      "id": "PROD-0003",
+      "name": "Paracetamol",
+      "category": "Dược phẩm",
+      "quantity": 200,
+      "price": 5000,
+      "dateAdded": "2023-06-03"
+    },
+    {
+      "id": "PROD-0004",
+      "name": "Efferalgan",
+      "category": "Dược phẩm",
+      "quantity": "65",
+      "price": "30000",
+      "dateAdded": "2025-06-05",
+      "description": "Hàng mới"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Thực phẩm chức năng",
+      "description": "Các sản phẩm hỗ trợ sức khỏe",
+      "id": "c7d9"
+    },
+    {
+      "name": "Thiết bị y tế",
+      "description": "Thiết bị phục vụ chăm sóc sức khỏe",
+      "id": "0d81"
+    },
+    {
+      "name": "Dược phẩm",
+      "description": "Thuốc và sản phẩm y tế",
+      "id": "4e8c"
+    }
+  ]
+}
